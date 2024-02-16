@@ -53,6 +53,29 @@ main {
   text-align: center;
 }
 
+.button {
+  margin-top: 6px;
+  margin-bottom: 3px;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  padding: 4px 11px;
+  font-size: 16.5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #4c87af;
+  border-radius: 5px;
+  color: #4c8baf;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+  border: 2px solid #4c87af;
+  border-radius: 5px;
+  background-color: #4c8baf;
+  color: white;
+}
 
 .course-name {
   font-family: "Times New Roman", Times, serif;
@@ -70,7 +93,7 @@ main {
   margin-bottom: 20px;
 }
 
-.due-assignments a {
+/* .due-assignments a {
   color: #007bff;
   text-decoration: none;
 }
@@ -78,4 +101,4 @@ main {
 .due-assignments a:hover {
   text-decoration: none;
   font-weight: bold;
-}
+} */
