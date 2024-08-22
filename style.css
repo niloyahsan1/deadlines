@@ -1,105 +1,109 @@
 body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    /* background-size: cover; */
+    background: url("./files/bg.jpg") no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #git_link {
-  position: sticky;
-  top: 0;
-  background-color: #0a0a23;
-  color: white;
-  width: 100%;
-  text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #0a0a23;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 header,
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 5px;
-}
-
-main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 40px;
-  flex-grow: 1;
-}
-
-/* .box {
-  width: 290px;
-  height: 300px;
-  background-color: #fff;
-  border: 3px solid #333;
-  border-radius: 20px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
-.box {
-  width: 320px;
-  height: 400px;
-  background-color: #fff;
-  border: 3px solid #333;
-  border-radius: 20px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-}
-
+    /* background-color: #333; */
+    background-color: #3333338a;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    flex-grow: 1;
+  }
+  
+  /* .box {
+    width: 290px;
+    height: 300px;
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    } */
+    
+    .box {
+      width: 320px;
+      height: 400px;
+      /* background-color: #fff; */
+      background-color: #ffffffbe;
+      border: 3px solid #333;
+      border-radius: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+    
 .button {
-  margin-top: 6px;
-  margin-bottom: 3px;
-  font-family: "Times New Roman", Times, serif;
-  display: inline-block;
-  padding: 4px 11px;
-  font-size: 16.5px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: white;
-  border: 2px solid #4c87af;
-  border-radius: 5px;
-  color: #4c8baf;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    padding: 4px 11px;
+    font-size: 16.5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #4c87af;
+    border-radius: 5px;
+    color: #4c8baf;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .button:hover {
-  border: 2px solid #4c87af;
-  border-radius: 5px;
-  background-color: #4c8baf;
-  color: white;
+    border: 2px solid #4c87af;
+    border-radius: 5px;
+    background-color: #4c8baf;
+    color: white;
 }
 
 .course-name {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-decoration: underline;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
 
 .due-assignments {
-  font-family: Cambria;
-  font-size: 25px;
-  padding: 1px;
-  margin-bottom: 20px;
+    font-family: Cambria;
+    font-size: 25px;
+    padding: 1px;
+    margin-bottom: 20px;
 }
 
 /* .due-assignments a {
