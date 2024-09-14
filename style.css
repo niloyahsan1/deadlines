@@ -3,11 +3,13 @@ body {
     margin: 0;
     padding: 0;
     /* background-color: #f4f4f4; */
-    /* background-size: cover; */
-    background: url("./files/bg.jpg") no-repeat center center;
+    background-size: cover;
+    background: url("./files/bg.gif");
+    /* background: url("./files/bg.gif") no-repeat center center; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: rgb(224, 224, 224);
 }
 
 #git_link {
@@ -26,18 +28,19 @@ footer {
     color: white;
     text-align: center;
     padding: 5px;
-  }
-  
-  main {
+}
+
+main {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     padding: 40px;
     flex-grow: 1;
-  }
-  
-  /* .box {
+    color: rgb(224, 224, 224);
+}
+
+/* .box {
     width: 290px;
     height: 300px;
     background-color: #fff;
@@ -50,23 +53,24 @@ footer {
     align-items: center;
     text-align: center;
     } */
-    
-    .box {
-      width: 320px;
-      height: 400px;
-      /* background-color: #fff; */
-      background-color: #ffffffbe;
-      border: 3px solid #333;
-      border-radius: 20px;
-      margin: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
-    }
-    
-.button {
+
+.box {
+    width: 340px;
+    height: 450px;
+    /* background-color: #fff; */
+    background-color: #3333338a;
+    border: 2px solid #4456a7;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: rgb(224, 224, 224);
+}
+
+/* .button {
     margin-top: 6px;
     margin-bottom: 3px;
     font-family: "Times New Roman", Times, serif;
@@ -77,17 +81,40 @@ footer {
     text-decoration: none;
     cursor: pointer;
     background-color: white;
-    border: 2px solid #4c87af;
+    border: 2px solid #4456a7;
     border-radius: 5px;
-    color: #4c8baf;
+    color: #4456b7;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .button:hover {
-    border: 2px solid #4c87af;
+    border: 2px solid #4456a7;
     border-radius: 5px;
-    background-color: #4c8baf;
+    background-color: #4456b7;
     color: white;
+} */
+
+.button {
+    margin-top: 6px;
+    margin-bottom: 3px;
+    font-family: "Times New Roman", Times, serif;
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 16.5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #4456b7;
+    border: 2px solid #192869;
+    border-radius: 20px;
+    color: rgb(224, 224, 224);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #192869;
+    color: rgb(224, 224, 224);
+    border-color: #3448a1;
 }
 
 .course-name {
@@ -97,6 +124,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 20px;
     text-decoration: underline;
+    color: rgb(224, 224, 224);
 }
 
 .due-assignments {
@@ -104,6 +132,7 @@ footer {
     font-size: 25px;
     padding: 1px;
     margin-bottom: 20px;
+    color: rgb(224, 224, 224);
 }
 
 /* .due-assignments a {
