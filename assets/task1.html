@@ -4,99 +4,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSE421 Lab 3</title>
+  <link rel="icon" type="image/webp" href="./favicon.webp">
+  <title>CSE421 Lab 5 Submission Details</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
+      background-size: cover;
+      background-attachment: fixed;
+      background: url("./background.gif");
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: var(--text-primary);
+    }
+
+    header {
+      background: rgba(51, 51, 51, 0.45);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+      border-bottom: 2px solid rgba(68, 86, 167, 0.6);
+      color: var(--text-primary);
+      text-align: center;
+      padding: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
+      background: rgba(51, 51, 51, 0.45);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+      border-top: 2px solid rgba(68, 86, 167, 0.6);
+      color: var(--text-secondary);
+      text-align: center;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      flex-grow: 1;
     }
 
     .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 620px;
+      background: rgba(51, 51, 51, 0.45);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+      padding: 32px;
+      border-radius: 20px;
+      border: 2px solid rgba(68, 86, 167, 0.6);
+      border-top: 2px solid rgba(129, 140, 248, 0.8);
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(68, 86, 167, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      animation: fadeIn 0.5s ease-out;
     }
 
-    h1 {
-      font-size: 40px;
-      color: #333;
-      margin-bottom: 10px;
-      text-align: center;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    h2 {
-      font-size: 25px;
-      color: #333;
-      margin-bottom: 10px;
+    .header-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(68, 86, 167, 0.35);
+      border: 1px solid rgba(129, 140, 248, 0.5);
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    h3 {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 10px;
-      text-align: center;
+    .page-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+      color: #ffffff;
+      line-height: 1.3;
     }
 
-    h4 {
-      font-size: 16px;
-      color: #333;
-      margin-bottom: 10px;
+    .details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    h5 {
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 10px;
+    .detail-card {
+      background: rgba(15, 23, 42, 0.5);
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(68, 86, 167, 0.4);
+      border-left: 4px solid rgba(129, 140, 248, 0.9);
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    h6 {
+    .detail-card:hover {
+      transform: translateX(4px);
+      background: rgba(25, 40, 105, 0.4);
+    }
+
+    .detail-label {
       font-size: 12px;
-      color: #333;
-      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .detail-value code {
+      background: rgba(68, 86, 167, 0.3);
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: 'Consolas', monospace;
+      font-size: 14px;
+      border: 1px solid rgba(129, 140, 248, 0.4);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 9px 20px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: rgba(68, 86, 183, 0.75);
+      border: 1.5px solid rgba(25, 40, 105, 0.9);
+      border-top: 1.5px solid rgba(129, 140, 248, 0.6);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+      border-radius: 20px;
+      color: rgb(224, 224, 224);
+      box-shadow: 0 4px 12px rgba(25, 40, 105, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      background: rgba(25, 40, 105, 0.9);
+      border-color: rgba(52, 72, 161, 1);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(25, 40, 105, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.4);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Lab 5 Home Task Submission Details</h1>
 
-    <hr>
+  <header>
+    <h1>Submission Details</h1>
+  </header>
 
-    <h2>
-      Deadline: Wednesday, September 24, 2024, 11:59 pm <br><br>
-      Naming Format of the zip files: ID_Name_Section <br><br>
-      Submit the PKA file as Home Task.
-    </h2>
+  <main>
+    <div class="container">
+      <span class="header-badge">CSE421 • Computer Networks</span>
+      <h2 class="page-title">Lab 5 Home Task Details</h2>
 
-    <hr>
+      <div class="details-list">
+        <div class="detail-card">
+          <div class="detail-label">⏰ Submission Deadline</div>
+          <div class="detail-value">Wednesday, September 24, 2024 at 11:59 PM</div>
+        </div>
 
-    <!--     <h2>
-      1. 你好 - ni hao -Hello <br><br>
-      2. 老师 - laoshi - teacher <br><br>
-      3. 学生 - xue sheng - Student <br><br>
-      4. 谢谢 - xiexie - Thanks <br><br>
-      5. 不客气 - bukeqi - no thanks <br><br>
-      6. 再见 - Zaijian - bye or see you again <br><br>
-      7. 中国 - Zhongguo - China <br><br>
-      8. 孟加拉国 - Meng jia la guo - Bangladesh <br><br>
-      9. 中文 - Zhong wen - Chinese language <br><br>
-      10. 汉语 - Hanzi - Chinese Characters
-    </h2>
+        <div class="detail-card">
+          <div class="detail-label">📁 File Naming Format</div>
+          <div class="detail-value">Zip File: <code>ID_Name_Section</code></div>
+        </div>
 
-    <hr>  -->
+        <div class="detail-card">
+          <div class="detail-label">📄 File Requirement</div>
+          <div class="detail-value">Submit the <code>.pka</code> (Packet Tracer) file as your Home Task.</div>
+        </div>
+      </div>
 
-    <!--     <video width="640" height="360" controls>
-      <source src="Chinese Audio.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> -->
+      <a href="../index.html" class="button">← Back to Main Page</a>
+    </div>
+  </main>
 
-  </div>
+  <footer>
+    <p>** You can add your courses also. Just Knock me on Messenger **</p>
+  </footer>
+
 </body>
 
-</html
+</html>
