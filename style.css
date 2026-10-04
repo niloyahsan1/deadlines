@@ -58,6 +58,17 @@ footer p {
     margin: 0;
 }
 
+footer a {
+    color: #818cf8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #6d7af0;
+}
+
 main {
     display: flex;
     justify-content: center;
