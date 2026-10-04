@@ -4,8 +4,8 @@ body {
     padding: 0;
     /* background-color: #f4f4f4; */
     background-size: cover;
-    background: url("./figures/background.gif");
-    /* background: url("./figures/background.gif") no-repeat center center; */
+    background: url("./files/bg.gif");
+    /* background: url("./files/bg.gif") no-repeat center center; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -19,19 +19,6 @@ body {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 8px 0;
-}
-
-#git_link a {
-    display: inline-block;
-}
-
-#github {
-    display: block;
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-    filter: brightness(1.05);
 }
 
 header,
