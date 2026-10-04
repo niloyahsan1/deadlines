@@ -15,5 +15,5 @@ This repository contains a simple, dark-themed responsive website designed to tr
 - **Direct Links**: Quick access buttons for assignment sheets, submission forms, lecture slides, and recordings.
 - **Custom Styling**: Animated background, styled action buttons, and responsive grid layout.
 
-## Live Demo
+## Live Preview
 Visit the live website here: [Deadlines Web App](https://niloyahsan1.github.io/deadlines/)
